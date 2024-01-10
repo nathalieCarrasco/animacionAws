@@ -1,0 +1,72 @@
+body {
+  background-color: black;
+  overflow: hidden;
+  transition: background-color 0.5s;
+}
+
+.container {
+  text-align: center;
+}
+
+.sky {
+  position: relative;
+  height: 100vh;
+}
+
+#rocket {
+  position: absolute;
+  width: 60px;
+  bottom: 0;
+  transition: bottom 0.3s;
+}
+
+.destello {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+button {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  padding: 10px 20px;
+}
+
+h1 {
+  font-size: 48px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: none;
+}
+
+.object {
+  position: absolute;
+  max-width: 50%;
+  max-height: 50vh;
+  transition: all 2s ease-in-out;
+  display: none; /* Inicialmente oculto */
+}
+
+.show {
+  display: block;
+}
+
+.rotate {
+  animation: rotateRocks 3s infinite linear;
+}
+
+@keyframes rotateRocks {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
